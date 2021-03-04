@@ -1,0 +1,22 @@
+class Student:
+    count = 0# 1
+#Every Time we creat a new student object. We call this methode. And we increment
+    #all proprieties of a class are referenced internally by the dot natation prefix self
+    def __init__(self):
+        self.name = ""  # Assign to an instance variable
+        self.surname = ""  # Assign to an instance variable
+        Student.count += 1  # Assign to the class variable
+        self.number = Student.count  # Assign to an instance variable
+
+#create student object
+first_student = Student()  # no arguments are passed, self is implicit
+first_student.name = "Hela"
+first_student.surname = "Ska"
+
+second_student = Student()
+second_student.name = "Bob"
+second_student.surname = "ska"
+
+print("{}: {} {}".format(first_student.number, first_student.name, first_student.surname))
+print("{}: {} {}".format(second_student.number, second_student.name, second_student.surname))
+print("Number of students:  {}".format(Student.count))
